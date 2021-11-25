@@ -1,0 +1,39 @@
+<link rel="stylesheet" type="text/css" href="css/home.css"> 
+
+</head>
+<body>
+  <%- include ('./navbar.ejs') %>
+
+<h2>Homepage</h2>
+
+<h1 class="achivementPercent">Achivement Percentage: <%=achivementPercent%>%</h1>
+
+<div class="cards-container">
+<div class="card">
+  
+  <div class="container">
+    <h4><b>Total Activities</b></h4> 
+    <p><%= activityData.length   %> </p> 
+  </div>
+</div>
+<div class="card inprogress">
+  
+  <div class="container  ">
+    <h4><b>In-progress Activities</b></h4> 
+    <p><%=  inProgressCount %> </p> 
+  </div>
+</div>
+<div class="card completed">
+  
+  <div class="container ">
+    <h4><b>Completed Actvities</b></> Activities</b></h4> 
+    <p><%= completedCount   %> </p> 
+  </div>
+</div>
+</div>
+  <%- include('./all-activities.ejs')  %> 
+   
+
+
+</body>
+</html> 

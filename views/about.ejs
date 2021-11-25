@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About Activity Planner</title>
+</head>
+<body>
+    <%- include ('./navbar.ejs') %>
+
+    
+    <h3>Description of the Application</h3>
+    Staying physically active and maintaining sufficient exercise is a challenge in the current COVID situation. 
+    Design and implement a web-based activity planner application to help students to define a fitness program and to keep track of their activity achievements.  
+    The application should allow the user to define their own training schedule and to record their actual achievements against the plan. The training schedule and achievements are private, i.e. they are only visible to this logged in user. However, users can decide to make goals and achievements public by posting them on a public page within the application. This public page is accessible to everyone, i.e. it doesn’t require a login to view the contents.
+    The properties of a training schedule can be designed by you but should at least consist of:
+    <ul>
+        <li>    	A description of the training goal, e.g. the training goal “run 5 miles” consists of the description “run”, the quantity “5” and the unit “miles”. 
+        </li>
+        <li>          	The date for which the training goal is planned.
+ 
+        </li>
+<li>A way to record the achievement of a training goal. That typically happens at a time after the training goal has been set.
+    </li>
+    </ul>
+    
+        
+    <h4>
+        The activity planner application should provide the following core functionality:
+    </h4>
+    <ul>
+      <li>  	Functionality that shows all training goals for any particular user.  </li> 
+      <li>  		Functionality that lets users define new training goals. </li> 
+      <li>  	Functionality that lets users remove training goals that have not been fulfilled.</li> 
+      <li>  	Functionality that lets users amend the specification of training goals that have not been fulfilled, e.g. change “run 5 miles” into “run 6 miles”.</li> 
+      <li>  	Functionality to record the achievement of training goals, e.g. training goals can be ticked off or actual times or number of repetitions can be recorded. </li> 
+      <li>  	Functionality that lets users see the percentage of fulfilled training goals.  </li> 
+      <li>  	Functionality that lets other users see achieved training goals.   </li> 
+       
+    
+    </ul>
+   
+</body>
+</html>

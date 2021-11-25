@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/viewActivity.css">
+    <title><%= activity.activityName  %> </title>
+
+</head>
+<body>
+    
+    <%- include ('./navbar.ejs') %>
+
+    <h2><%= activity.activityName %></h2>
+
+    <p>Activity Notes :<%= activity.activityNotes %></p> 
+    <p>Status :<%= activity.status %></p> 
+    <p>Number of Days:<%= activity.days %> days </p>
+    <p>Start Date :<%= activity.startDate %></p> </p>
+    <p>End Date :<%= activity.endDate %> </p>
+
+   <button class="home">
+    <a href="/">All Activities</a>
+   </button> 
+   <button class="remove">
+    <a href="/remove-activity/<%= activity._id %> ">Remove Activity</a>
+   </button> 
+   <button class="edit">
+    <a href="/edit-activity/<%= activity._id %> ">Edit Activity</a>
+   </button> 
+  
+    <!-- only showing button if status = in-progress -->
+    <% if (activity.status==='In-Progress') { %>
+        <button class="mark-complete"
+        ><a style=" text-decoration: none;" href="/complete-activity/<%= activity._id %>">Complete Activity</a></button>       
+        <% } %>
+        
+
+    
+</body>
+</html>

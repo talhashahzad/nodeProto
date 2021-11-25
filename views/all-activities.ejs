@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/allActivity.css"> 
+
+   
+</head>
+<body>
+
+    <h1>All Acitvities</h1>
+  
+
+    <table>
+        <tr>
+          <th>Activity Name</th>
+       
+          <th> Status</th>
+          <th>Days</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Details</th>
+          
+        </tr>
+       <% activityData.forEach(activity=>{ %>
+       
+        <tr>
+          <td><%= activity.activityName %> </td>
+         
+          <td><%= activity.status %></td> 
+          <td><%= activity.days %> </td>
+          <td><%= activity.startDate %> </td>
+          <td><%= activity.endDate %> </td>
+        <td> <a href="./view-activity/<%= activity._id  %> "> Activity Details </a></td>
+
+        </tr>
+      </a>
+
+      <% })  %>  
+      
+     <button class="add-button"
+     ><a style=" text-decoration: none;" href="/add-activity">Add Activity</a></button> 
+       
+    
+       
+      </table>
+</body>
+
+</html>
